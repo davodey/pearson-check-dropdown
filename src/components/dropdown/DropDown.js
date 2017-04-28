@@ -7,15 +7,17 @@ const DropDown = (props) => {
         <div>
             <DropDownList
                 labelCollection={props.labelCollection}
-                checked={props.checked}
-                onChange={props.onCheck}
+                onChange={props.onChange}
                 calculateHeight={props.calculateHeight}
-
+                dropdownListHeight = {props.dropdownListHeight}
+                disabled={props.disabled}
             />
             <StickyButton
+                labelCollection={props.labelCollection}
                 labelChecked={props.labelChecked}
                 openCreateForm={props.openCreateForm}
-                calculateHeight={props.calculateHeight(60)}
+                calculateHeight={props.stickyButtonPosition}
+                disabled={props.disabled}
             />
         </div>
     );

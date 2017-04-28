@@ -3,7 +3,6 @@ import Button from "./Button";
 
 const CreateNewLabel = (props) => {
     return (
-
         <ul id="#popup" className="pe-list pe-list--unstyled  " role="menu" aria-labelledby="menuBtn2" style={props.style}>
             <span className="padding">Create New Label</span>
             <li id="#popup2" role="menu" aria-labelledby="createLabelBtn">

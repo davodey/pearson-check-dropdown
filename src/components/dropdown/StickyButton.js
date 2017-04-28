@@ -1,8 +1,10 @@
 import React from "react";
+import _ from 'lodash';
 
 const StickyButton = (props) => {
     const buttonPosition={top:props.calculateHeight};
-    if (props.labelChecked === false) {
+    const areChecked = _.find(props.labelCollection, { "checked": true });
+    if (areChecked === false  || areChecked === undefined) {
         return (
             <button role="menuitem"
                     className="create-new apply"

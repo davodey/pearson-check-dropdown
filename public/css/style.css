@@ -9335,8 +9335,8 @@ table.pe-proto.small th, table.pe-proto.small td {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.2);
-  height: 500px;
-  max-height: 500px;
+  height: 350px;
+  max-height: 525px;
 }
 @media (max-width: 640px) {
   /* line 22, pattern-lab/source/_patterns/01-molecules/12-question-creation/_label-selection.scss */
@@ -9379,7 +9379,7 @@ table.pe-proto.small th, table.pe-proto.small td {
   right: 0px;
   padding-top: 0;
   width: 207px;
-  max-height:500px;
+  max-height:350px;
   margin:0;
   padding:0;
 }

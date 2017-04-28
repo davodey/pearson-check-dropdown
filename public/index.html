@@ -3,31 +3,119 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <!--
-      Notice the use of %PUBLIC_URL% in the tag above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico"><!DOCTYPE html>
+    <html class="">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
+    <head>
+      <title>Title</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width" />
+      <link rel="stylesheet" href="./css/style.css" media="all" />
+
+    </head>
+
   <body>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <section id="modal" class="pe-proto modal modal-template">
+    <div class='pe-template__static-large'>
+      <div id="modal-title" class="modal-title">
+        <h3 class="pe-title">Create a Question</h3>
+        <button type="button" class="pe-icon--btn">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="ariaLabel1" class="pe-icon--remove-lg-18">
+            <title id="ariaLabel1">Close dialog</title>
+            <use xlink:href="#remove-lg-18"></use>
+          </svg>
+        </button>
+      </div>
 
-      To begin the development, run `npm start`.
-      To create a production bundle, use `npm run build`.
-    -->
-  </body>
+      <div id="modal-content" class="modal-content">
+        <div class="row question-type">
+          <div class="flex">
+            <div id="questionType" class="question-type-container">
+              <div class="pe-label">Question type</div>
+              <div id="chooseQuestionType" class="pe-proto dropdown">
+                <button id="menuBtn" role="button" type="button" class="pe-btn--btn_large">Multiple Choice</button>
+              </div>
+            </div>
+            <div id="selectLabel" class="label-container margin-left-triple full-width">
+              <div class="pe-label">Label as</div>
+              <div id="root"></div>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="row question-creation">
+          <div class="question-creation-container">
+            <div id="enterQuestion" class="pe-proto textbox">
+              <div for="">Question Text</div>
+              <div role="textbox" aria-multiline="true" class="textarea pe-textInput" contentEditable="true" data-text="Type question"></div>
+              <span class="pe-input_underline"></span>
+            </div>
+
+
+            <div class="points-and-credit">
+              <div id="pointValue" class="points">
+                <label for="pointInput" name="points">Points</label>
+                <div class="input">
+                  <input type="tel" class="pe-textInput" id="pointInput" placeholder="0.0">
+                  <span class="pe-input_underline"></span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div id="enterAnswers" class="row answer-choices">
+          <label class="pe-label" for="answerChoice1">Answer choices</label>
+          <div class="answer-input">
+            <div class="input-and-editor">
+              <div class="draggable-input ">
+                <div class="grip-handle">
+                  <img src="../images/grip.svg" alt="grip icon">
+                </div>
+                <div class="input-container">
+                  <input id="answerChoice1" type="text" name="textfield" class="pe-textInput" aria-label="Answer Choice" placeholder="Type answer choice" value="">
+                </div>
+              </div>
+            </div>
+            <div class="pe-checkbox ">
+              <input type="checkbox" name="Correct" id="correct1" value="1" />
+              <label for="correct1">Correct</label>
+              <span>
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" class="pe-icon--check-sm-18">
+          <use xlink:href="#check-sm-18"></use>
+        </svg>
+      </span>
+            </div>
+
+
+          </div>
+
+
+
+        </div>
+
+        <div id="enterOption" class="row option-entry">
+          <div class="pe-label">Rationale</div>
+          <div class="pe-proto textbox flex">
+            <div class="flex-item">
+              <div class="textarea pe-textInput" contenteditable="true" role="textbox" aria-labelledby="textbox" aria-multiline="true"></div> <span class="pe-input_underline"></span>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div id="saveAndContinue" class="actions">
+        <button class="pe-btn--btn_large">Save and create another</button>
+        <button class="pe-btn__primary pe-btn--btn_large margin-left">Save</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="backgroundOverlay" class="overlay true"></div>
   <script>
       if (!document.getElementById('pe-icons-sprite')) {
           var pe_ajax=new XMLHttpRequest();
@@ -42,4 +130,6 @@
           pe_ajax.send();
       }
   </script>
+  </body>
+
 </html>

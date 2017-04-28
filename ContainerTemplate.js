@@ -15,7 +15,9 @@ class ContainerTemplate extends Component {
     }
 
     render () {
-
+        return(
+            <div>test</div>
+        )
     }
 }
 
